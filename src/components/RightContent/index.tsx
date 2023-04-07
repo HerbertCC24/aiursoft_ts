@@ -1,12 +1,8 @@
 /** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
+// import { css } from "@emotion/react";
 import { GithubOutlined, DatabaseOutlined } from "@ant-design/icons";
 import { Input, Space, Tooltip, Button } from "antd";
-const flex = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-};
+import { flex } from "../../utils/layout";
 const { Search } = Input;
 const RightContent = () => {
   return (

@@ -1,0 +1,14 @@
+export { default as anduin } from "../../static/anduin.png";
+export { default as mc } from "../../static/mc.png";
+export { default as tl } from "../../static/tl.png";
+export { default as ft } from "../../static/ft.jpeg";
+export { default as yang } from "../../static/Yang.png";
+export { default as gb } from "../../static/gb.jpeg";
+export { default as rest } from "../../static/rest.jpeg";
+export { default as kit } from "../../static/kit.png";
+export { default as cs } from "../../static/cs.jpeg";
+export { default as jj } from "../../static/jj.jpeg";
+export { default as sl } from "../../static/sl.png";
+export { default as russia } from "../../static/russia.jpeg";
+export { default as _2048 } from "../../static/2048.png";
+export { default as jim } from "../../static/jm.jpeg";
