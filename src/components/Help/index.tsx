@@ -51,7 +51,7 @@ const e = [
     id: 3,
     title: "帮助",
     children: [
-      { label: "Github", value: "", icon: <GithubOutlined {...iconCss} /> },
+      { label: "Github", value: "https://github.com/AiursoftWeb", icon: <GithubOutlined {...iconCss} /> },
     ],
   },
 ];

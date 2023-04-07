@@ -9,15 +9,15 @@ const LeftContent = () => {
       <div
         css={css`
           background-image: url(${logo});
-          width: 32px;
-          height: 32px;
+          width: 42px;
+          height: 42px;
           background-size: contain;
           border-radius: 5px;
         `}
       />
       <div
         css={css`
-          font-size: 20px;
+          font-size: 28px;
           font-family: Helvetica;
           font-weight: 600;
           margin-left: 10px;

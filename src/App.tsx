@@ -60,8 +60,8 @@ const App = () => {
               alignItems: "center",
               justifyContent: "space-between",
               backgroundColor: "rgba(255,255,255,0)",
-              paddingInline: 44,
-              height: 56,
+              paddingInline: 200,
+              height: 80,
             },
             css`
               // box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.06);
@@ -89,7 +89,7 @@ const App = () => {
               src={title}
               width={800}
               alt=""
-              css={{ zIndex: 1, paddingTop: 100 }}
+              css={{ zIndex: 1, paddingTop: 80 }}
             />
             <div css={[flex,{ paddingTop: 30 }]}>
               <Input
