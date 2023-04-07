@@ -1,12 +1,25 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { Layout, ConfigProvider } from "antd";
+import {
+  Layout,
+  ConfigProvider,
+  FloatButton,
+  Input,
+  Popover,
+  Button,
+} from "antd";
+import { createFromIconfontCN } from "@ant-design/icons";
 import bg from "./static/bg.jpeg";
-import l3 from "./label/l6.svg";
+import title from "./label/fffef8.svg";
 import RightContent from "./components/RightContent";
 import LeftContent from "./components/LeftContent";
 import { flex } from "./utils/layout";
 import MainCard from "./components/MainCard";
+import { QuestionCircleOutlined, SearchOutlined } from "@ant-design/icons";
+import Help from "./components/Help";
+const IconFont = createFromIconfontCN({
+  scriptUrl: "//at.alicdn.com/t/c/font_4000305_48omqq0823.js",
+});
 const { Header, Content } = Layout;
 const App = () => {
   return (
@@ -18,55 +31,93 @@ const App = () => {
         },
       }}
     >
+      <FloatButton.Group shape="square" style={{ right: 48 }}>
+        <Popover placement="leftBottom" content={<Help i={1} />}>
+          <FloatButton icon={<QuestionCircleOutlined />} />
+        </Popover>
+        <Popover placement="leftBottom" content={<Help i={0} />}>
+          <FloatButton icon={<IconFont type="icon-xiaoqu-xianxing" />} />
+        </Popover>
+      </FloatButton.Group>
       <Layout
         className="layout"
         css={css`
           height: 100vh;
-          background-image: url(${bg});
+          background-image: linear-gradient(
+              rgba(255, 255, 255, 1),
+              rgba(255, 255, 255, 0)
+            ),
+            url(${bg});
           background-size: cover;
           min-width: 1280px;
           min-height: 800px;
         `}
       >
-        <div
-          css={{
-            height: "100%",
-            width: "100%",
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,1),rgba(255,255,255,0.1),rgba(255,255,255,0.2),rgba(255,255,255,0))",
-          }}
-        >
-          <Header
-            css={[
-              {
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                backgroundColor: "rgba(255,255,255,.6)",
-                paddingInline: 44,
-                height: 56,
-              },
-              css`
-                box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.04);
-              `,
-            ]}
-          >
-            <LeftContent />
-            <RightContent />
-          </Header>
-          <Content
-            css={{
+        <Header
+          css={[
+            {
               display: "flex",
               alignItems: "center",
-              flexDirection: "column",
-            }}
+              justifyContent: "space-between",
+              backgroundColor: "rgba(255,255,255,0)",
+              paddingInline: 44,
+              height: 56,
+            },
+            css`
+              // box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.06);
+            `,
+          ]}
+        >
+          <LeftContent />
+          <RightContent />
+        </Header>
+        <Content
+          css={{
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "column",
+          }}
+        >
+          <div
+            css={[
+              flex,
+              { flexDirection: "column", justifyContent: "space-between" },
+            ]}
+            style={{ height: 360 }}
           >
-            <div css={flex} style={{ height: 340 }}>
-              <img src={l3} width={800} alt="" css={{ zIndex: 1 }} />
+            <img
+              src={title}
+              width={800}
+              alt=""
+              css={{ zIndex: 1, paddingTop: 100 }}
+            />
+            <div css={[flex,{ paddingTop: 30 }]}>
+              <Input
+                size="large"
+                css={flex}
+                placeholder="输入关键字搜索"
+                style={{ alignSelf: "center", width: 500 }}
+                styles={{
+                  input: {
+                    backgroundColor: "rgba(255,255,255,0.5)",
+                    borderRadius: 40,
+                    // height: 50,
+                  },
+                }}
+              />
+              <Button
+                ghost
+                shape="round"
+                css={{ marginLeft: 10, height: 36 }}
+                type="primary"
+                icon={<SearchOutlined />}
+              >
+                搜索
+              </Button>
             </div>
-            <MainCard />
-          </Content>
-        </div>
+          </div>
+          <MainCard />
+        </Content>
         {/* <Footer
         style={{
           textAlign: 'center',
