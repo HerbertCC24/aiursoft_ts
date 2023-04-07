@@ -161,11 +161,10 @@ const MainCard = () => {
     <div
       css={[
         {
-          marginTop: "100px",
+          marginTop: "50px",
           backgroundColor: "rgba(0,0,0,0)",
           minWidth: "800px",
           width: "70%",
-          minHeight: "400px",
         },
       ]}
     >

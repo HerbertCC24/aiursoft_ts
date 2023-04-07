@@ -61,7 +61,7 @@ const App = () => {
               justifyContent: "space-between",
               backgroundColor: "rgba(255,255,255,0)",
               paddingInline: 200,
-              height: 80,
+              height: '10%',
             },
             css`
               // box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.06);
@@ -83,15 +83,15 @@ const App = () => {
               flex,
               { flexDirection: "column", justifyContent: "space-between" },
             ]}
-            style={{ height: 360 }}
+            style={{ height: '40%' }}
           >
             <img
               src={title}
               width={800}
               alt=""
-              css={{ zIndex: 1, paddingTop: 80 }}
+              css={{ zIndex: 1, paddingTop: 0 }}
             />
-            <div css={[flex,{ paddingTop: 30 }]}>
+            <div css={[flex,{ paddingTop: 0 }]}>
               <Input
                 size="large"
                 css={flex}
