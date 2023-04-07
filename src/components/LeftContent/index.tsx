@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import logo from "../../static/logo.png";
+import logo from "../../static/grey.svg";
 import { Space } from "antd";
 import { flex } from "../../utils/layout";
 const LeftContent = () => {
@@ -12,6 +12,7 @@ const LeftContent = () => {
           width: 32px;
           height: 32px;
           background-size: contain;
+          border-radius: 5px;
         `}
       />
       <div
@@ -19,6 +20,7 @@ const LeftContent = () => {
           font-size: 20px;
           font-family: Helvetica;
           font-weight: 600;
+          margin-left: 10px;
         `}
       >
         Aiursoft

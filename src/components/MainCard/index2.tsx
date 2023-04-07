@@ -1,19 +1,20 @@
 /** @jsxImportSource @emotion/react */
 import { Card, Col, Row, Space } from "antd";
 import {
-  MessageOutlined,
+  createFromIconfontCN,
   FilePptOutlined,
   FileTextOutlined,
   VideoCameraOutlined,
-  CodeOutlined,
-  CustomerServiceOutlined,
+  GithubOutlined,
 } from "@ant-design/icons";
 import { flex } from "../../utils/layout";
 import * as icons from "./icons";
-import { IconFont } from "../IconFont";
-const iconCss = { css: { marginRight: "12px" } };
+const IconFont = createFromIconfontCN({
+  scriptUrl: "//at.alicdn.com/t/c/font_4000305_48omqq0823.js",
+});
+const iconCss = { css: { marginRight: "6px" } };
 const imgCss = {
-  css: { width: "24px", height: "24px", marginRight: "12px", borderRadius: 2 },
+  css: { width: "14px", height: "14px", marginRight: "6px", borderRadius: 2 },
 };
 const info = [
   {
@@ -24,7 +25,7 @@ const info = [
       {
         label: "开友者社区",
         value: "https://git.aiursoft.cn",
-        icon: <CodeOutlined {...iconCss} />,
+        icon: <IconFont {...iconCss} type="icon-shequ1" />,
       },
       {
         label: "包中心",
@@ -34,7 +35,7 @@ const info = [
       {
         label: "聊天室",
         value: "https://nextcloud.aiursoft.cn/talk",
-        icon: <MessageOutlined {...iconCss} />,
+        icon: <IconFont {...iconCss} type="icon-shequ2" />,
       },
       {
         label: "文档中心",
@@ -54,7 +55,7 @@ const info = [
       {
         label: "音乐会",
         value: "music.aiursoft.cn",
-        icon: <CustomerServiceOutlined {...iconCss} />,
+        icon: <IconFont {...iconCss} type="icon-yinle1" />,
       },
       {
         label: "回答社区",
@@ -110,51 +111,51 @@ const info = [
       },
     ],
   },
-  // {
-  //   id: 2,
-  //   title: "住户小区",
-  //   icon: <IconFont type="icon-xiaoquguanli" />,
-  //   children: [
-  //     {
-  //       label: "AnduinXue",
-  //       value: "https://anduin.aiursoft.cn",
-  //       icon: <img src={icons.anduin} {...imgCss} alt="" />,
-  //     },
-  //     {
-  //       label: "杨过",
-  //       value: "https://gxhao.aiursoft.cn",
-  //       icon: <img src={icons.yang} {...imgCss} alt="" />,
-  //     },
-  //     {
-  //       label: "Gbiner",
-  //       value: "https://gbiner.aiursoft.cn",
-  //       icon: <img src={icons.gb} {...imgCss} alt="" />,
-  //     },
-  //     {
-  //       label: "Rest",
-  //       value: "https://rest.aiursoft.cn",
-  //       icon: <img src={icons.rest} {...imgCss} alt="" />,
-  //     },
-  //     {
-  //       label: "Jimmoen",
-  //       value: "https://jimmoen.aiursoft.cn",
-  //       icon: <img src={icons.jim} {...imgCss} alt="" />,
-  //     },
-  //     {
-  //       label: "蓝猫猫",
-  //       value: "https://cat.aiursoft.cn",
-  //       icon: <img src={icons.kit} {...imgCss} alt="" />,
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: 3,
-  //   title: "帮助",
-  //   icon: <IconFont {...iconCss} type="icon-bangzhu" />,
-  //   children: [
-  //     { label: "Github", value: "", icon: <GithubOutlined {...iconCss} /> },
-  //   ],
-  // },
+  {
+    id: 2,
+    title: "住户小区",
+    icon: <IconFont type="icon-xiaoquguanli" />,
+    children: [
+      {
+        label: "AnduinXue",
+        value: "https://anduin.aiursoft.cn",
+        icon: <img src={icons.anduin} {...imgCss} alt="" />,
+      },
+      {
+        label: "杨过",
+        value: "https://gxhao.aiursoft.cn",
+        icon: <img src={icons.yang} {...imgCss} alt="" />,
+      },
+      {
+        label: "Gbiner",
+        value: "https://gbiner.aiursoft.cn",
+        icon: <img src={icons.gb} {...imgCss} alt="" />,
+      },
+      {
+        label: "Rest",
+        value: "https://rest.aiursoft.cn",
+        icon: <img src={icons.rest} {...imgCss} alt="" />,
+      },
+      {
+        label: "Jimmoen",
+        value: "https://jimmoen.aiursoft.cn",
+        icon: <img src={icons.jim} {...imgCss} alt="" />,
+      },
+      {
+        label: "蓝猫猫",
+        value: "https://cat.aiursoft.cn",
+        icon: <img src={icons.kit} {...imgCss} alt="" />,
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "帮助",
+    icon: <IconFont {...iconCss} type="icon-bangzhu" />,
+    children: [
+      { label: "Github", value: "", icon: <GithubOutlined {...iconCss} /> },
+    ],
+  },
 ];
 const MainCard = () => {
   return (
@@ -164,7 +165,7 @@ const MainCard = () => {
           marginTop: "100px",
           backgroundColor: "rgba(0,0,0,0)",
           minWidth: "800px",
-          width: "70%",
+          width: "80%",
           minHeight: "400px",
         },
       ]}
@@ -172,7 +173,7 @@ const MainCard = () => {
       <Row>
         {info.map((e) => {
           return (
-            <Col span={12}>
+            <Col span={6}>
               <Card
                 key={e.id}
                 bordered={false}
@@ -184,14 +185,14 @@ const MainCard = () => {
                   flexDirection: "column",
                 }}
               >
-                <Space css={{ fontSize: 28, color: "#666", fontWeight: 600 }}>
+                <Space css={{ fontSize: 20, color: "#666", fontWeight: 600 }}>
                   {e.icon}
                   {e.title}
                 </Space>
-                <Row css={{ marginTop: 30 }}>
+                <div css={{ marginTop: 20 }}>
                   {e.children.map((more) => {
                     return (
-                      <Col span={10} offset={2}>
+                      <div>
                         <a
                           href={more.value}
                           target="_blank"
@@ -199,8 +200,8 @@ const MainCard = () => {
                             flex,
                             {
                               color: "#777",
-                              height: 50,
-                              fontSize: 24,
+                              height: 30,
+                              fontSize: 16,
                               justifyContent: "flex-start",
                             },
                           ]}
@@ -215,10 +216,10 @@ const MainCard = () => {
                           {/* </p> */}
                           {more.label}
                         </a>
-                      </Col>
+                      </div>
                     );
                   })}
-                </Row>
+                </div>
               </Card>
             </Col>
           );
