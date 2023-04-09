@@ -16,8 +16,10 @@ const RightContent = () => {
           onSearch={() => {}}
           style={{ width: 200, alignSelf: "center", marginRight: 20 }}
         /> */}
-        <Popover placement="bottomRight" content={<Help i={0} />}>
-          <Button icon={<IconFont type="icon-xiaoqu-xianxing" />} type="text" />
+        <Popover placement="bottomRight" content={<Help i={0} title={false} />}>
+          <Button icon={<IconFont type="icon-xiaoqu-xianxing" />} type="text">
+            住户小区
+          </Button>
         </Popover>
         <Tooltip placement="bottom" title="文件库">
           <Button

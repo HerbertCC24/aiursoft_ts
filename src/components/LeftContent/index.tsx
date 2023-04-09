@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import logo from "../../static/grey.svg";
+import logo from "../../static/logo.png";
 import { Space } from "antd";
 import { flex } from "../../utils/layout";
 const LeftContent = () => {
@@ -9,18 +9,18 @@ const LeftContent = () => {
       <div
         css={css`
           background-image: url(${logo});
-          width: 42px;
-          height: 42px;
+          width: 32px;
+          height: 32px;
           background-size: contain;
           border-radius: 5px;
         `}
       />
       <div
         css={css`
-          font-size: 28px;
+          font-size: 18px;
           font-family: Helvetica;
           font-weight: 600;
-          margin-left: 10px;
+          margin-left: 4px;
         `}
       >
         Aiursoft

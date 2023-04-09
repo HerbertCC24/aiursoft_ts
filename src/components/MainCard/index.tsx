@@ -187,10 +187,10 @@ const MainCard = () => {
                   {e.icon}
                   {e.title}
                 </Space>
-                <Row css={{ marginTop: 30 }}>
+                <Row css={{ marginTop: 10 }}>
                   {e.children.map((more) => {
                     return (
-                      <Col span={10} offset={2}>
+                      <Col span={11} offset={1}>
                         <a
                           href={more.value}
                           target="_blank"
@@ -199,7 +199,7 @@ const MainCard = () => {
                             {
                               color: "#777",
                               height: 50,
-                              fontSize: 24,
+                              fontSize: 18,
                               justifyContent: "flex-start",
                             },
                           ]}

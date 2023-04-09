@@ -60,11 +60,11 @@ const App = () => {
               alignItems: "center",
               justifyContent: "space-between",
               backgroundColor: "rgba(255,255,255,0)",
-              paddingInline: 200,
-              height: '10%',
+              paddingInline: 60,
+              height: '6%',
             },
             css`
-              // box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.06);
+              box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.06);
             `,
           ]}
         >

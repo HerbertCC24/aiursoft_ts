@@ -51,17 +51,33 @@ const e = [
     id: 3,
     title: "帮助",
     children: [
-      { label: "Github", value: "https://github.com/AiursoftWeb", icon: <GithubOutlined {...iconCss} /> },
+      {
+        label: "Github",
+        value: "https://github.com/AiursoftWeb",
+        icon: <GithubOutlined {...iconCss} />,
+      },
     ],
   },
 ];
-const Help: React.FC<{ i: number }> = ({ i }) => {
+const Help: React.FC<{ i: number; title?: boolean }> = ({
+  i,
+  title = true,
+}) => {
   return (
-    <div css={{ padding: 10, minWidth: 150, minHeight: 100 }}>
-      <Space css={{ fontSize: 20, color: "#666", fontWeight: 600 }}>
-        {e[i].title}
-      </Space>
-      <div css={{ marginTop: 20 }}>
+    <div css={{ padding: 10, minWidth: 150 }}>
+      {title && (
+        <Space
+          css={{
+            fontSize: 20,
+            color: "#666",
+            fontWeight: 600,
+            marginBottom: 20,
+          }}
+        >
+          {e[i].title}
+        </Space>
+      )}
+      <div>
         {e[i].children.map((more) => {
           return (
             <div>
