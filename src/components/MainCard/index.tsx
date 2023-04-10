@@ -62,7 +62,7 @@ const info = [
         icon: <IconFont {...iconCss} type="icon-guangchang" />,
       },
       {
-        label: "住户家园",
+        label: "文件银行",
         value: "https://nextcloud.aiursoft.cn",
         icon: <IconFont {...iconCss} type="icon-guangchang" />,
       }
