@@ -4,9 +4,7 @@ import {
   Layout,
   ConfigProvider,
   FloatButton,
-  Input,
   Popover,
-  Button,
 } from "antd";
 import { createFromIconfontCN } from "@ant-design/icons";
 import bg from "./static/bg.jpeg";
@@ -15,7 +13,7 @@ import RightContent from "./components/RightContent";
 import LeftContent from "./components/LeftContent";
 import { flex } from "./utils/layout";
 import MainCard from "./components/MainCard";
-import { QuestionCircleOutlined, SearchOutlined } from "@ant-design/icons";
+import { QuestionCircleOutlined } from "@ant-design/icons";
 import Help from "./components/Help";
 import { Footer } from "antd/es/layout/layout";
 import Search from "./components/Search";
