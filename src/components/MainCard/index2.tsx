@@ -1,4 +1,5 @@
 /** @jsxImportSource @emotion/react */
+//@ts-nocheck
 import { Card, Col, Row, Space } from "antd";
 import {
   createFromIconfontCN,
@@ -92,7 +93,7 @@ const info = [
       {
         label: "街机",
         value: "https://miku.aiursoft.cn",
-        icon: <img src={icons.jj} {...imgCss} alt="" />,
+        icon: <img src={icons.mk} {...imgCss} alt="" />,
       },
       {
         label: "扫雷",

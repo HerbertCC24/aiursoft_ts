@@ -7,7 +7,7 @@ export { default as gb } from "../../static/gb.jpeg";
 export { default as rest } from "../../static/rest.jpeg";
 export { default as kit } from "../../static/kit.png";
 export { default as cs } from "../../static/cs.jpeg";
-export { default as jj } from "../../static/jj.jpeg";
+export { default as mk } from "../../static/miku2.gif";
 export { default as sl } from "../../static/sl.png";
 export { default as russia } from "../../static/russia.jpeg";
 export { default as _2048 } from "../../static/2048.png";

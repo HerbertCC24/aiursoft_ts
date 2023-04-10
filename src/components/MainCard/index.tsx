@@ -96,7 +96,7 @@ const info = [
       {
         label: "Miku",
         value: "https://miku.aiursoft.cn",
-        icon: <img src={icons.jj} {...imgCss} alt="" />,
+        icon: <img src={icons.mk} {...imgCss} alt="" />,
       },
       {
         label: "扫雷",
