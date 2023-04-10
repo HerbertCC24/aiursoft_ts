@@ -48,17 +48,17 @@ const info = [
       },
       {
         label: "图书馆",
-        value: "books.aiursoft.cn",
+        value: "https://books.aiursoft.cn",
         icon: <IconFont {...iconCss} type="icon-tushuguan" />,
       },
       {
         label: "音乐会",
-        value: "music.aiursoft.cn",
+        value: "https://music.aiursoft.cn",
         icon: <CustomerServiceOutlined {...iconCss} />,
       },
       {
         label: "回答社区",
-        value: "qa.aiursoft.cn",
+        value: "https://qa.aiursoft.cn",
         icon: <IconFont {...iconCss} type="icon-guangchang" />,
       },
     ],
