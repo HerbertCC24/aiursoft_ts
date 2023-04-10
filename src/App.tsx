@@ -17,6 +17,7 @@ import { flex } from "./utils/layout";
 import MainCard from "./components/MainCard";
 import { QuestionCircleOutlined, SearchOutlined } from "@ant-design/icons";
 import Help from "./components/Help";
+import { Footer } from "antd/es/layout/layout";
 const IconFont = createFromIconfontCN({
   scriptUrl: "//at.alicdn.com/t/c/font_4000305_48omqq0823.js",
 });
@@ -61,7 +62,7 @@ const App = () => {
               justifyContent: "space-between",
               backgroundColor: "rgba(255,255,255,0)",
               paddingInline: 60,
-              height: '6%',
+              height: "6%",
             },
             css`
               box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.06);
@@ -83,7 +84,7 @@ const App = () => {
               flex,
               { flexDirection: "column", justifyContent: "space-between" },
             ]}
-            style={{ height: '40%' }}
+            style={{ height: "40%" }}
           >
             <img
               src={title}
@@ -91,7 +92,7 @@ const App = () => {
               alt=""
               css={{ zIndex: 1, paddingTop: 0 }}
             />
-            <div css={[flex,{ paddingTop: 0 }]}>
+            <div css={[flex, { paddingTop: 0 }]}>
               <Input
                 size="large"
                 css={flex}
@@ -118,13 +119,14 @@ const App = () => {
           </div>
           <MainCard />
         </Content>
-        {/* <Footer
-        style={{
-          textAlign: 'center',
-        }}
-      >
-        Ant Design ©2023 Created by Ant UED
-      </Footer> */}
+        <Footer
+          style={{
+            textAlign: "center",
+            backgroundColor: "rgba(0,0,0,0)",
+          }}
+        >
+          Aiursoft-Homepage ©2023 Created by HerbertLzx 某备A000000号
+        </Footer>
       </Layout>
     </ConfigProvider>
   );
