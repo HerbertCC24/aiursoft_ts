@@ -33,11 +33,11 @@ const info = [
       },
       {
         label: "聊天室",
-        value: "https://nextcloud.aiursoft.cn/talk",
+        value: "https://nextcloud.aiursoft.cn/index.php/call/jzxa5ba9",
         icon: <MessageOutlined {...iconCss} />,
       },
       {
-        label: "文档中心",
+        label: "文档馆",
         value: "https://wiki.aiursoft.cn",
         icon: <FileTextOutlined {...iconCss} />,
       },
@@ -57,7 +57,7 @@ const info = [
         icon: <CustomerServiceOutlined {...iconCss} />,
       },
       {
-        label: "回答社区",
+        label: "问答社区",
         value: "https://qa.aiursoft.cn",
         icon: <IconFont {...iconCss} type="icon-guangchang" />,
       },
@@ -84,12 +84,12 @@ const info = [
         icon: <img src={icons.ft} {...imgCss} alt="" />,
       },
       {
-        label: "CS",
+        label: "CS:Source",
         value: "https://cssource.aiursoft.cn",
         icon: <img src={icons.cs} {...imgCss} alt="" />,
       },
       {
-        label: "街机",
+        label: "Miku",
         value: "https://miku.aiursoft.cn",
         icon: <img src={icons.jj} {...imgCss} alt="" />,
       },
@@ -104,8 +104,8 @@ const info = [
         icon: <img src={icons._2048} {...imgCss} alt="" />,
       },
       {
-        label: "俄罗斯方块",
-        value: "https://tetris.aiursoft.cn",
+        label: "Hextris",
+        value: "https://hextris.aiursoft.cn",
         icon: <img src={icons.russia} {...imgCss} alt="" />,
       },
     ],
