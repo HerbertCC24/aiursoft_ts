@@ -52,8 +52,8 @@ const e = [
     title: "帮助",
     children: [
       {
-        label: "Github",
-        value: "https://github.com/AiursoftWeb",
+        label: "Git",
+        value: "https://git.aiursoft.cn/Aiursoft",
         icon: <GithubOutlined {...iconCss} />,
       },
     ],
