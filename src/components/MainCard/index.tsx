@@ -43,7 +43,7 @@ const info = [
       },
       {
         label: "视频舞台",
-        value: "https://video.aiursoft.cn",
+        value: "https://videos.aiursoft.cn",
         icon: <VideoCameraOutlined {...iconCss} />,
       },
       {

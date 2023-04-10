@@ -38,13 +38,13 @@ const info = [
         icon: <IconFont {...iconCss} type="icon-shequ2" />,
       },
       {
-        label: "文档中心",
+        label: "文档馆",
         value: "https://wiki.aiursoft.cn",
         icon: <FileTextOutlined {...iconCss} />,
       },
       {
         label: "视频舞台",
-        value: "https://video.aiursoft.cn",
+        value: "https://videos.aiursoft.cn",
         icon: <VideoCameraOutlined {...iconCss} />,
       },
       {
