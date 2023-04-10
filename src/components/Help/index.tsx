@@ -1,11 +1,12 @@
 /** @jsxImportSource @emotion/react */
 
-import { GithubOutlined } from "@ant-design/icons";
+// import { GithubOutlined } from "@ant-design/icons";
 import { flex } from "../../utils/layout";
 import { Space } from "antd";
 import * as icons from "../MainCard/icons";
 import { IconFont } from "../IconFont";
-const iconCss = { css: { marginRight: "6px" } };
+
+// const iconCss = { css: { marginRight: "6px" } };
 const imgCss = {
   css: { width: "24px", height: "24px", marginRight: "12px", borderRadius: 2 },
 };
@@ -54,7 +55,13 @@ const e = [
       {
         label: "Git",
         value: "https://git.aiursoft.cn/Aiursoft",
-        icon: <GithubOutlined {...iconCss} />,
+        icon: (
+          <img
+            src={icons.git}
+            alt=""
+            css={{ width: 22, height: 22, marginRight: 6 }}
+          />
+        ),
       },
     ],
   },

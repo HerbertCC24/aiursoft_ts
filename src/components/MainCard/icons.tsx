@@ -12,3 +12,4 @@ export { default as sl } from "../../static/sl.png";
 export { default as russia } from "../../static/russia.jpeg";
 export { default as _2048 } from "../../static/2048.png";
 export { default as jim } from "../../static/jm.jpeg";
+export { default as git } from "../../static/git.png";
