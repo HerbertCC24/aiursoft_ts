@@ -61,6 +61,11 @@ const info = [
         value: "https://qa.aiursoft.cn",
         icon: <IconFont {...iconCss} type="icon-guangchang" />,
       },
+      {
+        label: "家园",
+        value: "https://nextcloud.aiursoft.cn",
+        icon: <IconFont {...iconCss} type="icon-guangchang" />,
+      }
     ],
   },
   {
