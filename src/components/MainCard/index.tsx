@@ -166,7 +166,7 @@ const MainCard = () => {
     <div
       css={[
         {
-          marginTop: "50px",
+          marginTop: "90px",
           backgroundColor: "rgba(0,0,0,0)",
           minWidth: "800px",
           width: "70%",
@@ -195,7 +195,7 @@ const MainCard = () => {
                 <Row css={{ marginTop: 10 }}>
                   {e.children.map((more) => {
                     return (
-                      <Col span={11} offset={1}>
+                      <Col span={7} offset={1}>
                         <a
                           href={more.value}
                           target="_blank"
