@@ -41,12 +41,9 @@ const errorHandler = (error: any) => {
 
 //对 extend 实例进行简单的封装
 export const request = extend({
-//   prefix: 'http://localhost:3000', // 统一的请求前缀
   timeout: 3000, // 超时时间
   headers: {
-    // headers中搭载token等请求头信息
-    // "Content-Type": "application/x-www-form-urlencoded",
-    // Authentication: localStorage.getItem("token") || "",
+    "Content-Type": "application/json",
   },
   //处理请求错误 调用上面的错误处理逻辑
   errorHandler: errorHandler,
@@ -55,7 +52,6 @@ export const request = extend({
 // 对实例request进行请求拦截
 // 可以在里面对url、option中的参数进行进一步处理
 request.interceptors.request.use((url, options) => {
-  console.log(url, process.env.REACT_APP_AIUR_API);
   return {
     options: {
       ...options,
