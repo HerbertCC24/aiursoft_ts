@@ -18,6 +18,7 @@ import MainCard from "./components/MainCard";
 import { QuestionCircleOutlined, SearchOutlined } from "@ant-design/icons";
 import Help from "./components/Help";
 import { Footer } from "antd/es/layout/layout";
+import Search from "./components/Search";
 const IconFont = createFromIconfontCN({
   scriptUrl: "//at.alicdn.com/t/c/font_4000305_48omqq0823.js",
 });
@@ -92,30 +93,7 @@ const App = () => {
               alt=""
               css={{ zIndex: 1, paddingTop: 0 }}
             />
-            <div css={[flex, { paddingTop: 0 }]}>
-              <Input
-                size="large"
-                css={flex}
-                placeholder="输入关键字搜索"
-                style={{ alignSelf: "center", width: 500 }}
-                styles={{
-                  input: {
-                    backgroundColor: "rgba(255,255,255,0.5)",
-                    borderRadius: 40,
-                    // height: 50,
-                  },
-                }}
-              />
-              <Button
-                ghost
-                shape="round"
-                css={{ marginLeft: 10, height: 36 }}
-                type="primary"
-                icon={<SearchOutlined />}
-              >
-                搜索
-              </Button>
-            </div>
+            <Search />
           </div>
           <MainCard />
         </Content>
