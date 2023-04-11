@@ -6,12 +6,7 @@ import { useDebounce } from "ahooks";
 import { useEffect, useState } from "react";
 import { SearchOutlined } from "@ant-design/icons";
 import { openNewTab } from "../../utils/utils";
-async function httpGet(theUrl: string | URL) {
-  var xmlHttp = new XMLHttpRequest();
-  xmlHttp.open("GET", theUrl, false); // false for synchronous request
-  xmlHttp.send(null);
-  return xmlHttp.response;
-}
+import { searchSuggest } from "../../service/api";
 const Search: React.FC = (params) => {
   const [value, setValue] = useState<string>("");
   const [open, setOpen] = useState<boolean>(false);
@@ -35,9 +30,7 @@ const Search: React.FC = (params) => {
         setOpen(false);
         return;
       }
-      const res = JSON.parse(
-        await httpGet(`https://www.aiursoft.com/suggestion/${debouncedValue}`)
-      );
+      const res = await searchSuggest(debouncedValue);
       const msg = res?.map((element: string) => ({
         label: element,
         value: element,
