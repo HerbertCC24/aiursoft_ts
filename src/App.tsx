@@ -1,13 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import {
-  Layout,
-  ConfigProvider,
-  FloatButton,
-  Popover,
-  Tooltip,
-  Button,
-} from "antd";
+import { Layout, ConfigProvider, FloatButton, Popover, Button } from "antd";
 import bg from "./static/bg.jpeg";
 import title from "./label/fffef8.svg";
 import RightContent from "./components/RightContent";
@@ -19,7 +12,6 @@ import Help from "./components/Help";
 import { Footer } from "antd/es/layout/layout";
 import Search from "./components/Search";
 import { IconFont } from "./components/IconFont";
-import { openNewTab } from "./utils/utils";
 const { Header, Content } = Layout;
 const App = () => {
   return (
@@ -32,14 +24,6 @@ const App = () => {
       }}
     >
       <FloatButton.Group shape="square" style={{ right: 48 }}>
-        <Tooltip placement="leftBottom" title={"服务可用性"}>
-          <FloatButton
-            icon={<IconFont type="icon-xitongkeyongxing" />}
-            onClick={() =>
-              openNewTab("https://stats.uptimerobot.com/ynrA5c73EN")
-            }
-          />
-        </Tooltip>
         <Popover placement="leftBottom" content={<Help i={0} />}>
           <FloatButton icon={<IconFont type="icon-xiaoqu-xianxing" />} />
         </Popover>
@@ -110,7 +94,9 @@ const App = () => {
           }}
         >
           Aiursoft-Homepage ©2023 Created by HerbertLzx 苏ICP备2022030859号{" "}
-          <Button href="https://stats.uptimerobot.com/ynrA5c73EN" type="link">服务可用性</Button>
+          <Button href="https://stats.uptimerobot.com/ynrA5c73EN" type="link">
+            服务可用性
+          </Button>
         </Footer>
       </Layout>
     </ConfigProvider>
