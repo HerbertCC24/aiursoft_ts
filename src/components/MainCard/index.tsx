@@ -57,12 +57,12 @@ const info = [
         icon: <CustomerServiceOutlined {...iconCss} />,
       },
       {
-        label: "问答社区",
-        value: "https://qa.aiursoft.cn",
+        label: "ChatGPT",
+        value: "https://chat.aiursoft.cn",
         icon: <IconFont {...iconCss} type="icon-guangchang" />,
       },
       {
-        label: "家园",
+        label: "文件银行",
         value: "https://nextcloud.aiursoft.cn",
         icon: <IconFont {...iconCss} type="icon-guangchang" />,
       }
