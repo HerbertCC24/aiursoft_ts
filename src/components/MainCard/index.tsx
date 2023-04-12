@@ -65,7 +65,7 @@ const info = [
         label: "文件银行",
         value: "https://nextcloud.aiursoft.cn",
         icon: <IconFont {...iconCss} type="icon-guangchang" />,
-      }
+      },
     ],
   },
   {
@@ -168,7 +168,7 @@ const MainCard = () => {
         {
           marginTop: "90px",
           backgroundColor: "rgba(0,0,0,0)",
-          minWidth: "800px",
+          minWidth: "1000px",
           width: "70%",
         },
       ]}
@@ -176,13 +176,14 @@ const MainCard = () => {
       <Row>
         {info.map((e) => {
           return (
-            <Col span={12}>
+            <Col span={12} key={e.id}>
               <Card
                 key={e.id}
                 bordered={false}
                 css={{
                   margin: 20,
                   backgroundColor: "rgba(255,255,255,0.6)",
+                  minWidth: 460,
                 }}
                 bodyStyle={{
                   flexDirection: "column",
@@ -195,8 +196,9 @@ const MainCard = () => {
                 <Row css={{ marginTop: 10 }}>
                   {e.children.map((more) => {
                     return (
-                      <Col span={7} offset={1}>
+                      <Col span={7} offset={1} key={more.label}>
                         <a
+                          key={more.label}
                           href={more.value}
                           target="_blank"
                           css={[

@@ -12,8 +12,17 @@ import Help from "./components/Help";
 import { Footer } from "antd/es/layout/layout";
 import Search from "./components/Search";
 import { IconFont } from "./components/IconFont";
+import { useEffect } from "react";
+import { auto as followSystemColorScheme } from "darkreader";
 const { Header, Content } = Layout;
 const App = () => {
+  useEffect(() => {
+    followSystemColorScheme({
+      brightness: 100,
+      contrast: 90,
+      sepia: 10,
+    });
+  }, []);
   return (
     <ConfigProvider
       theme={{
@@ -45,21 +54,7 @@ const App = () => {
           min-height: 800px;
         `}
       >
-        <Header
-          css={[
-            {
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              backgroundColor: "rgba(255,255,255,0)",
-              paddingInline: 60,
-              height: "6%",
-            },
-            css`
-              box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.06);
-            `,
-          ]}
-        >
+        <Header css={headerCss}>
           <LeftContent />
           <RightContent />
         </Header>
@@ -103,3 +98,11 @@ const App = () => {
   );
 };
 export default App;
+const headerCss = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+  backgroundColor: "rgba(255,255,255,0)",
+  paddingInline: 60,
+  height: "6%",
+};
