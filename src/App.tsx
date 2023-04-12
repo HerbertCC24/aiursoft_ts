@@ -98,11 +98,15 @@ const App = () => {
   );
 };
 export default App;
-const headerCss = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "space-between",
-  backgroundColor: "rgba(255,255,255,0)",
-  paddingInline: 60,
-  height: "6%",
-};
+const headerCss = css`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0);
+  padding-inline: 60;
+  height: 6%;
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.06);
+  @media (prefers-color-scheme: dark) {
+    box-shadow: none;
+  }
+`;
